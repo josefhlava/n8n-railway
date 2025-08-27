@@ -1,2 +1,5 @@
 FROM n8nio/n8n:latest
-RUN npm install -g n8n-nodes-globals
+
+USER root
+RUN npm install -g --unsafe-perm n8n-nodes-globals
+USER node
